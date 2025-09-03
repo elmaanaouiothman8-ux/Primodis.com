@@ -1,0 +1,56 @@
+:root {
+    --primary: #1a365d;
+    --secondary: #2d3748;
+    --accent: #f6ad55;
+    --text: #e2e8f0;
+    --dark-bg: #0f172a;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--dark-bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+/* Couleurs personnalisées */
+.bg-primary { background-color: var(--primary); }
+.bg-secondary { background-color: var(--secondary); }
+.bg-accent { background-color: var(--accent); }
+.text-primary { color: var(--primary); }
+.text-secondary { color: var(--secondary); }
+
+/* Dégradé header */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--dark-bg) 100%);
+}
+
+/* Effets cartes */
+.card-hover {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
